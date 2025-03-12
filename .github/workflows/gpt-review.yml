@@ -15,7 +15,7 @@ jobs:
       - name: Set up Python
         uses: actions/setup-python@v4
         with:
-          python-version: "3.10" # Use a version that is compatible with your OS
+          python-version: "3.9" # Use a version that is compatible with your OS
 
       - name: gpt-review
         uses: microsoft/gpt-review@v0.9.5
