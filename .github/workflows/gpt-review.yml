@@ -7,15 +7,11 @@ on:
 jobs:
   build:
     runs-on: [self-hosted, Windows]
+    shell: wsl-bash
 
     steps:
       - name: Checkout Code
         uses: actions/checkout@v4
-
-      - name: Set up Python
-        uses: actions/setup-python@v4
-        with:
-          python-version: "3.12.3"
 
       - name: gpt-review
         uses: microsoft/gpt-review@v0.9.5
