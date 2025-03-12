@@ -6,18 +6,11 @@ on:
 
 jobs:
   build:
-    runs-on: [self-hosted, Windows]
-    defaults:
-      run:
-        shell: pwsh
+    runs-on: [self-hosted, Linux]
 
     steps:
       - name: Checkout Code
         uses: actions/checkout@v4
-
-      - name: Debug gpt-review
-        run: python -m gpt-review --help
-        shell: pwsh
 
       - name: gpt-review
         uses: microsoft/gpt-review@v0.9.5
