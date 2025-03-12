@@ -1,7 +1,7 @@
 name: GPT review
 
 on:
-  push:
+  pull_request:
     types: [opened, synchronize]
 
 jobs:
