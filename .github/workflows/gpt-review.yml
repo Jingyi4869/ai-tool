@@ -15,7 +15,7 @@ jobs:
       - name: Set up Python
         uses: actions/setup-python@v4
         with:
-          python-version: "3.11.11"
+          python-version: "3.12.3"
 
       - name: gpt-review
         uses: microsoft/gpt-review@v0.9.5
