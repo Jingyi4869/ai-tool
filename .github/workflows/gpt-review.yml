@@ -1,0 +1,20 @@
+name: GPT review
+
+on:
+  pull_request:
+    types: [opened, synchronize]
+
+jobs:
+  build:
+    runs-on: [self-hosted, linux]
+
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v4
+
+      - name: gpt-review
+        uses: microsoft/gpt-review@v0.9.5
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          AZURE_OPENAI_API_KEY: ${{ secrets.AZURE_OPENAI_API_KEY }}
+          AZURE_OPENAI_API: ${{ secrets.AZURE_OPENAI_ENDPOINT }}
