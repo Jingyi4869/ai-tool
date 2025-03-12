@@ -7,11 +7,14 @@ on:
 jobs:
   build:
     runs-on: [self-hosted, Windows]
-    shell: wsl-bash
 
     steps:
       - name: Checkout Code
         uses: actions/checkout@v4
+
+      - name: Set up environment
+        run: echo "Using Bash"
+        shell: /usr/bin/bash # Ensure bash is used for this step
 
       - name: gpt-review
         uses: microsoft/gpt-review@v0.9.5
