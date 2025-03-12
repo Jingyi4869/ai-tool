@@ -9,7 +9,7 @@ jobs:
     runs-on: [self-hosted, Windows]
     defaults:
       run:
-        shell: wsl-bash
+        shell: pwsh
 
     steps:
       - name: Checkout Code
